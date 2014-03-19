@@ -506,14 +506,14 @@ if (version_compare(PHP_VERSION, '5.2.0') < 0)
 {
 	// die horribly: server does not match our requirements!
 	header('HTTP/1.0 500 FileManager requires PHP 5.2.0 or later', true, 500); // Internal server error
-	throw Exception('FileManager requires PHP 5.2.0 or later');   // this exception will most probably not be caught; that's our intent!
+	throw new Exception('FileManager requires PHP 5.2.0 or later');   // this exception will most probably not be caught; that's our intent!
 }
 
 if (function_exists('UploadIsAuthenticated'))
 {
 	// die horribly: user has not upgraded his callback hook(s)!
 	header('HTTP/1.0 500 FileManager callback has not been upgraded!', true, 500); // Internal server error
-	throw Exception('FileManager callback has not been upgraded!');   // this exception will most probably not be caught; that's our intent!
+	throw new Exception('FileManager callback has not been upgraded!');   // this exception will most probably not be caught; that's our intent!
 }
 
 //-------------------------------------------------------------------------------------------------------------
