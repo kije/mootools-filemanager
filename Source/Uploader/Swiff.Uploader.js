@@ -53,7 +53,7 @@ Swiff.Uploader = new Class({
     fileSizeMin: 1,
     fileSizeMax: null, // Official limit is 100 MB for FileReference, but I tested up to 2Gb!
     allowDuplicates: false,
-    timeLimit: (Browser.Platform.linux) ? 0 : 30,
+    timeLimit: ['linux'].contains(Browser.platform) ? 0 : 30,
 
     policyFile: null,
     buttonImage: null,
@@ -171,11 +171,22 @@ Swiff.Uploader = new Class({
 
     this.size = this.uploading = this.bytesLoaded = this.percentLoaded = 0;
 
-    if (Browser.Plugins.Flash.version < 9) {
+    if (this.getFlashVersion() < 9) {
       this.fireEvent('fail', ['flash']);
     } else {
       this.verifyLoad.delay(1000, this);
     }
+  },
+
+  getFlashVersion: function () {
+    // old (1.4.5) mootools Browser.Plugins.Flash implementation
+    var version = (Function.attempt(function(){
+      return navigator.plugins['Shockwave Flash'].description;
+    }, function(){
+      return new ActiveXObject('ShockwaveFlash.ShockwaveFlash').GetVariable('$version');
+    }) || '0 r0').match(/\d+/g);
+
+    return Number(version[0] || '0.' + version[1]) || 0;
   },
 
   verifyLoad: function() {
