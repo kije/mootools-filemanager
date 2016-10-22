@@ -42,10 +42,6 @@ div.filemanager-dialog {
 	font-size: 12px;
 	background: rgba(0, 0, 0, 0.8);
 
-	-o-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;
 
 	box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px;
@@ -107,9 +103,6 @@ div.filemanager-dialog button {
 	font-weight: normal;
 	margin: 0;
 	background: url("../Images/button.png") repeat-x;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;
 }
 div.filemanager-dialog-engine-trident4 button, div.filemanager-dialog-engine-trident5 button {
 	padding: 0 .25em;
