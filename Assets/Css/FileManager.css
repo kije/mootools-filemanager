@@ -84,10 +84,9 @@ div.filemanager button {
 	padding: 0 2px;
 
 	color: #333;
-	text-shadow: #eee 1px 1px 1px;
 
 	clear: none;
-	background: url("../Images/button.png") repeat-x;
+	background-color: #D7DEE8;
 	border: 1px solid #a1aeb9;
 }
 div.filemanager-engine-trident4 button,
@@ -195,7 +194,7 @@ div.filemanager div.filemanager-browsercontainer {
 	min-width: 189px;
 	border: 0;
 	border-right: 1px solid #bebebe;
-	background: #D7DEE8 url("../Images/filelist.png") repeat-x bottom left;
+	background-color: #D7DEE8;
 	overflow: hidden;
 
 	box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
