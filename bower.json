@@ -1,0 +1,18 @@
+{
+  "name": "mootools-filemanager",
+  "homepage": "https://github.com/kije/mootools-filemanager",
+  "authors": [
+    "Kim Jeker <github@kije.ch>"
+  ],
+  "description": "Filemanager for mootools",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "Demos"
+  ]
+}
