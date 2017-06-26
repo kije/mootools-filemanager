@@ -24,7 +24,7 @@ Swiff.Uploader = new Class({
   Implements: Events,
 
   options: {
-    path: 'Swiff.Uploader.swf',
+    path: '../../Assets/Swiff.Uploader.swf',
 
     target: null,
     zIndex: 9999,
